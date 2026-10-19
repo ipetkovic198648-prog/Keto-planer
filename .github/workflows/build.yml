@@ -19,9 +19,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Podesi Gradle
-        uses: gradle/actions/setup-gradle@v3
-
       - name: Kreiraj Android strukturu projekta
         run: |
           mkdir -p app/src/main/java/com/keto/planer
@@ -120,7 +117,7 @@ jobs:
                   android:theme="@android:style/Theme.Material.NoActionBar">
                   <activity
                       android:name=".MainActivity"
-                      exported="true">
+                      android:exported="true">
                       <intent-filter>
                           <action android:name="android.intent.action.MAIN" />
                           <category android:name="android.intent.category.LAUNCHER" />
